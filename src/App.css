@@ -1,0 +1,184 @@
+:root {
+  --bg: #f7f8fb;
+  --card: #fff;
+  --muted: #6b7280;
+  --accent: #1f62ff;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body,
+html,
+#root {
+  height: 100%
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  margin: 0;
+  color: #0f172a
+}
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column
+}
+
+.header {
+  margin: 20px auto;
+}
+
+.header h1 {
+  font-size: 18px;
+  margin: 0
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.service-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04)
+}
+
+.service-info {
+  flex: 1
+}
+
+.service-name {
+  font-weight: 600
+}
+
+.service-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px
+}
+
+.service-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center
+}
+
+.service-price {
+  font-weight: 700
+}
+
+.side {
+  background: var(--card);
+  padding: 12px;
+  border-radius: 8px
+}
+
+.side h3 {
+  margin: 0 0 8px 0
+}
+
+.empty {
+  color: var(--muted);
+  padding: 8px 0
+}
+
+.selected-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+
+.selected-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.sel-name {
+  font-size: 14px
+}
+
+.sel-row {
+  display: flex;
+  gap: 8px;
+  align-items: center
+}
+
+.sel-price {
+  font-weight: 700
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px dashed #e6e9ef
+}
+
+.total-label {
+  color: var(--muted)
+}
+
+.total-sum {
+  font-weight: 800
+}
+
+.btn {
+  background: #eef2ff;
+  border: 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: white
+}
+
+.btn.small {
+  padding: 6px 8px;
+  font-size: 13px
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed
+}
+
+@media(min-width:720px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start
+  }
+
+  .list {
+    flex: 1
+  }
+
+  .side {
+    width: 320px;
+    flex: 0 0 320px
+  }
+}
